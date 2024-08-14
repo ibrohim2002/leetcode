@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/sorting-the-sentence/
-//
+
 var sortSentence = function (s) {
   return s
     .split(" ")
@@ -7,5 +7,3 @@ var sortSentence = function (s) {
     .map((a) => a.slice(0, a.length - 1))
     .join(" ");
 };
-
-
