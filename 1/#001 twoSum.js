@@ -1,13 +1,12 @@
-// https://leetcode.com/problems/two-sum/description/
+// https://leetcode.com/problems/two-sum/
 
 var twoSum = function(nums, target) {
+    let obj = {}
     for(let i=0; i < nums.length; i++){
-        for(let j=0; j < nums.length; j++){
-            if(i!=j){
-                if(nums[i]+nums[j]==target) {
-                    return [i,j]
-                }
-            }
+        const diff = target - nums[i];
+        if (diff in obj) {
+            return [obj[diff], i];
         }
+        obj[nums[i]] = i;
     }
 };
